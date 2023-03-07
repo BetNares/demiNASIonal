@@ -1,2 +1,4 @@
 markdown: kramdown
 theme: minimal
+title: demiNASIonal
+description: Aplikasi web edukasi dan pendeteksi penyakit tanaman padi, terutama Brown Spot dan Leaf Blast, dengan bantuan kecerdasan buatan.
