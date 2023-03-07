@@ -2,8 +2,6 @@
 layout: home
 ---
 
-## demiNASIonal
----
 ### **Project Senior Project TI**
 
 ### Kelompok Rice Lovers
@@ -15,7 +13,7 @@ layout: home
 | Anggota 2 | [Kurnia Dwi Utami](https://github.com/kurniakdu) | 20/456369/TK/50499 |
 
 **Departemen Teknik Elektro dan Teknologi Informasi, Fakultas Teknik, Universitas Gadjah Mada**
-
+---
 ## Produk
 Nama: demiNASIonal<br>
 Jenis: Aplikasi web
@@ -97,3 +95,92 @@ Kami menawarkan solusi berupa aplikasi web yang dapat melakukan pengklasifikasia
 | + Fitur kalkulator pupuk yang dibutuhkan petani | - Tidak memiliki klasifikasi khusus penyakit yang dialami Tanaman |
 | + Dapat mendeteksi 30 jenis tanaman dan 520 jenis penyakit tanaman |  |
 
+---
+
+## SDLC
+
+Metodologi yang digunakan: **Agile** <br>
+Agile merupakan metodologi yang fleksibel terhadap perubahan yang terjadi pada requirement yang ada dan cocok untuk mengerjakan proyek dalam waktu singkat. Selain itu dengan adanya sprint pada Agile yang memungkinkan untuk memonitoring kemajuan dari masing masing individu dalam suatu sprint dan mengadakan evaluasi berdasarkan setiap masalah yang terjadi pada stpint tersebut. 
+
+### Tujuan Produk
+
+Produk ini bertujuan membantu petani untuk mengenali penyakit tanaman padi dan cara mengatasinya sehingga dapat memproduksi padi dengan kualitas baik dan mengurangi kemungkinan gagal panen.
+
+### Pengguna Potensial dan Kebutuhan Pengguna
+
+Pengguna potensial produk adalah petani padi. <br>
+Para pengguna perlu mengetahui, mengenali, dan menangani penyakit tanaman padi yang dihadapi.
+
+### Use Case Diagram 
+
+<img src="image/use_case.png" class="img-responsive" alt="">
+
+### Functional Requirement
+
+| FR | Deskripsi |
+| --- | --- |
+| Sign Up | Pada halaman ini, pengguna mendaftarkan dirinya menggunakan email |
+| Sign In | Pada halaman ini, pengguna akan memasukkan email dan password untuk masuk ke aplikasi |
+| Home Page | Pada halaman ini, memuat fitur yang disediakan Rice Lover seperti yaitu artikel dan upload foto |
+| Artikel | Pada halaman ini pengguna dapat melihat dan membaca post atau artikel terkait dengan penyakit pada padi |
+| Upload Foto | Pengguna dapat mengambil gambar kulit yang nantinya akan dikirim untuk dianalisis menggunakan AI milik Rice Lovers |
+| Rekomendasi Tindakan | Pada halaman ini, pengguna dapat melihat hasil beserta rekomendasi dari klasifikasi berdasarkan gambar padi yang dikirim |
+  
+### ERD 
+
+<img src="image/erd.png" class="img-responsive" alt="">
+
+### Low-Fidelity Wireframe
+
+<details> 
+<summary> Sign In </summary>
+
+<img src="image/lo-fi/signin.png" class="img-responsive" alt="">
+  
+</details>
+
+<details> 
+<summary> Sign Up </summary>
+
+<img src="image/lo-fi/signup.png" class="img-responsive" alt="">
+  
+</details>
+
+<details> 
+<summary> Home Page </summary>
+
+<img src="image/lo-fi/shomepage.png" class="img-responsive" alt="">
+  
+</details>
+
+<details> 
+<summary> Daftar Artikel </summary>
+
+<img src="image/lo-fi/list_artikel.png" class="img-responsive" alt="">
+  
+</details>
+
+<details> 
+<summary> Artikel </summary>
+
+<img src="image/lo-fi/artikel.png" class="img-responsive" alt="">
+  
+</details>
+
+<details> 
+<summary> Upload Foto </summary>
+
+<img src="image/lo-fi/upload.png" class="img-responsive" alt="">
+  
+</details>
+
+<details> 
+<summary> Rekomendasi Tindakan </summary>
+
+<img src="image/lo-fi/hasil.png" class="img-responsive" alt="">
+  
+</details>
+
+### Gantt Chart
+
+<img src="image/timeline.png" class="img-responsive" alt="">
