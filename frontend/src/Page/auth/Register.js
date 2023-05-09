@@ -1,6 +1,7 @@
+import React from "react";
 import {Container} from "@mui/material";
 
-function Login(){
+const Register = () => {
   return <Container>Hello World</Container>
 }
-export default Login;
+export default Register;
