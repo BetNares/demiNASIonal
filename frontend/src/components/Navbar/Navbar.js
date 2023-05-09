@@ -1,5 +1,7 @@
 import React from 'react'
-import { AppBar, Toolbar, styled } from '@mui/material'
+import { AppBar, Toolbar, styled, Box,Button } from '@mui/material'
+
+
 
 const Navbar = () => {
     const StyledToolBar = styled(Toolbar)({
@@ -9,10 +11,10 @@ const Navbar = () => {
   return (
     <AppBar>
         <StyledToolBar>
-            demiNasional
+            <Box>demiNasional</Box>
         </StyledToolBar>
     </AppBar>
   );
 };
 
-export default Navbar
+export default Navbar;
