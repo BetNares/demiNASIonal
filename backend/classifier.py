@@ -14,6 +14,8 @@ import keras.models
 from keras.models import model_from_json
 import tensorflow as tf
 
+# TO DO: FIX THE MODEL FILE PATH
+
 # opening and store file in a variable
 
 json_file = open('D:/Devon/Website stuff/demiNASIonal/backend/riceleafdisease_model.json','r')
