@@ -54,7 +54,17 @@ def classifyImage(file):
     preds = getPrediction(file, model)
     # Decode tha matrix to the following format (class_name, class_description, score) and pick the heighest score
     # We are going to use class_description since that describes what the model sees
-    prediction = decode_predictions(preds, top=1)
+    #prediction = decode_predictions(preds, top=1)
     # prediction[0][0][1] is eqaul to the first batch, top prediction and class_description
-    result = str(prediction[0][0][1])
+    maxnum = np.argmax(preds)
+    if maxnum == 0:
+        prediction = 'Hispa'
+    if maxnum == 1:
+        prediction = 'Healthy'
+    if maxnum == 2:
+        prediction = 'Brown Spot'
+    if maxnum == 3:
+        prediction = 'Leaf Blast'
+
+    result = str(prediction)
     return result
