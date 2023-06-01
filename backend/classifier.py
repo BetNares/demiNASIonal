@@ -18,7 +18,10 @@ import tensorflow as tf
 
 # opening and store file in a variable
 
-json_file = open('D:/Devon/Website stuff/demiNASIonal/backend/riceleafdisease_model.json','r')
+jsonmodel_path = os.path.dirname(os.path.realpath(__file__)) + '/riceleafdisease_model.json'
+h5model_path = os.path.dirname(os.path.realpath(__file__)) + '/riceleafdisease-model.h5'
+
+json_file = open(jsonmodel_path,'r')
 loaded_model_json = json_file.read()
 json_file.close()
 
@@ -28,7 +31,7 @@ model = model_from_json(loaded_model_json)
 
 # load weights into new model
 
-model.load_weights("D:/Devon/Website stuff/demiNASIonal/backend/riceleafdisease-model.h5")
+model.load_weights(h5model_path)
 print("Loaded Model from disk")
 
 # compile and evaluate loaded model
