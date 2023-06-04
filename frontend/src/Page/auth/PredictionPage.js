@@ -3,7 +3,7 @@ import {Box, Container, Typography , styled} from "@mui/material";
 import Button from "@mui/material/Button";
 import NavbarAuth from "../../components/Navbar/NavbarAuth";
 
-const PredictionPage = () => {
+const classifier = () => {
 
 //style
   const styles = {
@@ -98,7 +98,7 @@ const PredictionPage = () => {
     <MainBox style={styles}>
       <NavbarAuth/>
       <StyledButton variant="contained" color="success" fontSize="Large">
-        Cek Padi kamu
+        Masukan Gambar
        </StyledButton>
     </MainBox>
   /*  <>
@@ -114,4 +114,4 @@ const PredictionPage = () => {
   )
 };
 
-export default PredictionPage;
+export default classifier;
