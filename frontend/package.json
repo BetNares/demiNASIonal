@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "concurrently": "^8.0.1",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "react-router-dom": "^6.11.2"
   }
 }

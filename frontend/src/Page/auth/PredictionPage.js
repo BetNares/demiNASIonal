@@ -1,6 +1,33 @@
-import React, { useEffect, useRef, useState } from "react";
+//import React, { useEffect, useRef, useState } from "react";
+import {Box, Container, Typography , styled} from "@mui/material";
+import Button from "@mui/material/Button";
+import NavbarAuth from "../../components/Navbar/NavbarAuth";
 
-const Classifier = () => {
+const PredictionPage = () => {
+
+//style
+  const styles = {
+    backgroundImage: 'url("https://1.bp.blogspot.com/_y8UUOgY_SFo/S9L1Q4jtXcI/AAAAAAAAOH0/Iqez2w981WI/s1600/DSC_2365.JPG")',
+    backgroundSize: 'cover',
+    height: '100vh'
+    
+  };
+  const MainBox = styled(Box)({
+  });
+  const ContentBox = styled(Box)({
+    justifyContent:"space-between",
+
+  });
+  const StyledButton = styled(Button)({
+    justifyContent: "space-between",
+    marginTop:400,
+    marginLeft: 680,
+    backgroundColor:'#CBD91E'
+    
+  });
+
+  // take a picture
+  /*
   const canvasRef = useRef();
   const imageRef = useRef();
   const videoRef = useRef();
@@ -65,9 +92,16 @@ const Classifier = () => {
       imageRef.current = blob;
     })
   };
-
+*/
   return (
-    <>
+
+    <MainBox style={styles}>
+      <NavbarAuth/>
+      <StyledButton variant="contained" color="success" fontSize="Large">
+        Cek Padi kamu
+       </StyledButton>
+    </MainBox>
+  /*  <>
       <header>
         <h1>Image classifier</h1>
       </header>
@@ -76,8 +110,8 @@ const Classifier = () => {
         <canvas ref={canvasRef} hidden></canvas>
         <p>Currently seeing: {result}</p>
       </main>
-    </>
+    </>*/
   )
 };
 
-export default Classifier;
+export default PredictionPage;

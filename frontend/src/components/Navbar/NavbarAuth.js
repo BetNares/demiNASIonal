@@ -1,6 +1,6 @@
 import React from 'react'
 import { AppBar, Toolbar, styled, Box,Button } from '@mui/material'
-import Menu from '@mui/icons-material/Menu';
+
 
 
 const NavbarAuth = () => {
@@ -8,9 +8,12 @@ const NavbarAuth = () => {
         display:"flex",
         justifyContent: "space-between",
     });
+    const StyledAppBar = styled(AppBar)({
+      display:"flex",
+    })
 
   return (
-    <AppBar sx={{background: '#CBD91E'}}>
+    <StyledAppBar sx={{background: '#CBD91E'}}>
         <StyledToolBar>
             <Box sx={{
               color:'black', 
@@ -24,11 +27,11 @@ const NavbarAuth = () => {
               cursor: "pointer",
               }}
               >
-              <Menu/>
+
             </Box>
 
         </StyledToolBar>
-    </AppBar>
+    </StyledAppBar>
   );
 };
 
