@@ -1,9 +1,11 @@
-//import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import axios from 'axios';
 import {Box, Container, Typography , styled} from "@mui/material";
 import Button from "@mui/material/Button";
 import NavbarAuth from "../../components/Navbar/NavbarAuth";
+import UploadButtons from "../../components/FileUploader";
 
-const classifier = () => {
+const Classifier = () => {
 
 //style
   const styles = {
@@ -93,13 +95,38 @@ const classifier = () => {
     })
   };
 */
+
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [result, setResult] = useState("");  
+  
+  const submitForm = async () => {
+    const formData = new FormData();
+    formData.append("image", selectedFile);
+
+    const response = await fetch('/classify', {
+      method: "POST",
+      body: formData,
+    });
+
+    if (response.status === 200) {
+      const text = await response.text();
+      setResult(text);
+    } else {
+      setResult("Error from API.");
+    }
+
+  }
+
   return (
 
     <MainBox style={styles}>
-      <NavbarAuth/>
-      <StyledButton variant="contained" color="success" fontSize="Large">
-        Masukan Gambar
-       </StyledButton>
+
+      <input
+          type="file"
+          onChange={(e) => setSelectedFile(e.target.files[0])}
+      />
+      <button onClick={submitForm}>Submit</button>
+      <p>Currently seeing: {result}</p>
     </MainBox>
   /*  <>
       <header>
@@ -114,4 +141,4 @@ const classifier = () => {
   )
 };
 
-export default classifier;
+export default Classifier;
