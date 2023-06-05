@@ -106,6 +106,7 @@ const Classifier = () => {
 
   const [selectedFile, setSelectedFile] = useState(null);
   const [result, setResult] = useState("");  
+  const [imageUrl, setImageUrl] = useState(null);
   
   const submitForm = async () => {
     const formData = new FormData();
@@ -125,6 +126,18 @@ const Classifier = () => {
     }
 
   }
+
+  const handleFileUpload = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+      setImageUrl(reader.result);
+    };
+    
+    setSelectedFile(file)
+    reader.readAsDataURL(file);
+  };
 
   return (
 
@@ -155,13 +168,25 @@ const Classifier = () => {
               value=""
               title=" "
               id="UploadButton"
-              onChange={(e) => setSelectedFile(e.target.files[0])}
+              onChange={handleFileUpload}
           />
           <InsertPhotoIcon/>
           <Typography>Masukan Gambar</Typography>
           </StyledButton>
       </Box>
         
+      <Box sx={{
+          width: 350,
+          height: 150,
+          py:5,
+          justifyContent: 'center',
+          display:'flex',
+          mx:'auto',
+        }}
+      >
+      {imageUrl && <img src={imageUrl} alt="Uploaded Image"/>}
+      </Box>
+
       <Box 
       sx={{
         py:3,
@@ -173,7 +198,7 @@ const Classifier = () => {
               </StyledButton>
       </Box>
         
-        
+     
         
         <Box sx={{
           width: 350,
