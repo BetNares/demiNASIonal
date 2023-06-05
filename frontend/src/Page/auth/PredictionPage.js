@@ -4,6 +4,7 @@ import {Box, Container, Typography , styled} from "@mui/material";
 import Button from "@mui/material/Button";
 import NavbarAuth from "../../components/Navbar/NavbarAuth";
 import UploadButtons from "../../components/FileUploader";
+import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
 
 const Classifier = () => {
 
@@ -15,6 +16,7 @@ const Classifier = () => {
     
   };
   const MainBox = styled(Box)({
+  
   });
   const ContentBox = styled(Box)({
     justifyContent:"space-between",
@@ -22,10 +24,16 @@ const Classifier = () => {
   });
   const StyledButton = styled(Button)({
     justifyContent: "space-between",
-    marginTop:400,
-    marginLeft: 680,
-    backgroundColor:'#CBD91E'
-    
+    justifyItems:"center",
+    backgroundColor:'#CBD91E',
+    display:'inline'
+  });
+  const InputBox = styled(Box)({
+    backgroundColor:  '#F5F5F5',
+    opacity:0.5
+  });
+  const STypography = styled(Typography)({
+    color: 'Black'
   });
 
   // take a picture
@@ -102,6 +110,7 @@ const Classifier = () => {
   const submitForm = async () => {
     const formData = new FormData();
     formData.append("image", selectedFile);
+    formData.append('fileName', selectedFile.name);
 
     const response = await fetch('/classify', {
       method: "POST",
@@ -120,13 +129,72 @@ const Classifier = () => {
   return (
 
     <MainBox style={styles}>
+    <NavbarAuth />
+    <Container
+    sx={{
+      height:'100%',
+      alignContent:'center',
+      justifyContent:'center',
+      display:'flex',
+      flexDirection:'column',
 
-      <input
-          type="file"
-          onChange={(e) => setSelectedFile(e.target.files[0])}
-      />
-      <button onClick={submitForm}>Submit</button>
-      <p>Currently seeing: {result}</p>
+    }}
+    >
+      <Box sx={{py:3, mx:'auto'}}>
+        <StyledButton variant="contained" color="success"
+          sx={{
+            width: 250,
+            height: 150,
+            '&:hover': {
+              opacity: [0.9, 0.8, 0.7],
+            },
+          }}
+          >
+          <input
+              type="file"
+              value=""
+              title=" "
+              id="UploadButton"
+              onChange={(e) => setSelectedFile(e.target.files[0])}
+          />
+          <InsertPhotoIcon/>
+          <Typography>Masukan Gambar</Typography>
+          </StyledButton>
+      </Box>
+        
+      <Box 
+      sx={{
+        py:3,
+        mx:'auto'
+      }}>
+        <StyledButton variant="contained" color="success" 
+              onClick={submitForm}>
+                Submit
+              </StyledButton>
+      </Box>
+        
+        
+        
+        <Box sx={{
+          width: 350,
+          height: 100,
+          py:5,
+          backgroundColor: "#ffff",
+          display:'flex',
+          justifyContent:'center',
+          mx:'auto',
+          flexDirection:'column'
+        }}
+        > 
+          <STypography fontSize={'large'} sx={{mx:"auto"}}
+          >Hasil Klasifikasi: </STypography>
+          <STypography fontSize={'large'} sx={{mx:"auto"}}>  {result}</STypography>
+        </Box>
+
+
+    </Container>
+     
+      
     </MainBox>
   /*  <>
       <header>
