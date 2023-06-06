@@ -15,24 +15,29 @@ const NavbarAuth = () => {
   return (
     <StyledAppBar sx={{background: '#CBD91E'}}>
         <StyledToolBar>
-            <Box sx={{p:2}}>
-              <Link 
-                component="button"
-                variant="inherit"
-                color="text.primary"
-                href="/"
-                underline="none"
-                fontSize= "28px"
-                fontWeight='medium'
-              >
-                demiNASIonal
-              </Link>
+            <Box sx={{p:2}}
+              fontSize= "28px"
+              fontWeight='medium'
+            >
+              demiNASIonal
             </Box>
           
             <Stack
               direction="row"
               justifyContent="center"
             >
+              <Button sx={{
+                color:"black",
+                cursor: "pointer",
+                p:2
+                }}
+                variant='text'
+                href="/"
+                size="large"
+              >
+                Beranda
+              </Button>
+              
               <Button sx={{
                 color:"black",
                 cursor: "pointer",
