@@ -99,7 +99,7 @@ const LandingPage = () => {
                   </Typography>
                 </CardContent>
                 <CardActions >
-                  <Button href="" size="small">View</Button>
+                  <Button href="leafblast" size="small">View</Button>
                   {/* <Button size="small">Edit</Button> */}
                 </CardActions>
               </Card>

@@ -212,7 +212,7 @@ const Classifier = () => {
           justifyContent: 'center',
           display:'flex',
           mx:'auto',
-          bgcolor: 'rgba(255,255,255, 0.5)',
+          bgcolor: 'rgba(237,230,214, 0.7)',
           borderRadius:2,
         }}
         >
@@ -225,7 +225,7 @@ const Classifier = () => {
         width: 350,
         height: 50,
         py:5,
-        backgroundColor: 'rgba(0,0,0, 0.5)',
+        backgroundColor: 'rgba(10,25,10, 0.7)',
         borderRadius:2,
         display:'flex',
         justifyContent:'center',
