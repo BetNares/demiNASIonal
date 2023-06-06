@@ -1,7 +1,5 @@
 import React from 'react'
 import { AppBar, Toolbar, styled, Box, Button, Stack } from '@mui/material'
-import { Link } from "react-router-dom";
-
 
 
 const NavbarAuth = () => {

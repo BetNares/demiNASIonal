@@ -1,20 +1,11 @@
 import React from "react";
 import {Box, Container, Typography , styled, Grid, Card, CardMedia, CardContent, CardActions} from "@mui/material";
 import Button from "@mui/material/Button";
-import Stack from '@mui/material/Stack';
 import NavbarAuth from "../../components/Navbar/NavbarAuth";
 import Footer from "../../components/Navbar/Footer";
 
 
 const LandingPage = () => {
-  const styles = {
-    backgroundImage: 'url("https://1.bp.blogspot.com/_y8UUOgY_SFo/S9L1Q4jtXcI/AAAAAAAAOH0/Iqez2w981WI/s1600/DSC_2365.JPG")',
-    backgroundSize: 'cover',
-    height: '100vh'
-    
-  };
-  const MainContainer = styled(Box)({
-  });
 
   const StyledButton = styled(Button)({
     justifyContent: "space-between",

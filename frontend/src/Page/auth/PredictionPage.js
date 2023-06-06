@@ -1,9 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import axios from 'axios';
+import React, { useState } from "react";
 import {Box, Container, Typography , styled} from "@mui/material";
 import Button from "@mui/material/Button";
 import NavbarAuth from "../../components/Navbar/NavbarAuth";
-import UploadButtons from "../../components/FileUploader";
 import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
 
 const Classifier = () => {
@@ -18,20 +16,14 @@ const Classifier = () => {
   const MainBox = styled(Box)({
   
   });
-  const ContentBox = styled(Box)({
-    justifyContent:"space-between",
 
-  });
   const StyledButton = styled(Button)({
     justifyContent: "space-between",
     justifyItems:"center",
     backgroundColor:'#CBD91E',
     display:'inline'
   });
-  const InputBox = styled(Box)({
-    backgroundColor:  '#F5F5F5',
-    opacity:0.5
-  });
+
   const STypography = styled(Typography)({
     color: 'White'
   });
@@ -188,7 +180,7 @@ const Classifier = () => {
           mx:'auto',
         }}
       >
-      {imageUrl && <img src={imageUrl} alt="Uploaded Image" style={{maxHeight:'100%',maxWidth:'100%'}}/>}
+      {imageUrl && <img src={imageUrl} style={{maxHeight:'100%',maxWidth:'100%'}}/>}
       </Box>
 
       <Box 
