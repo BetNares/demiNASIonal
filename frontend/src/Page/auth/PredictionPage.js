@@ -150,7 +150,7 @@ const Classifier = () => {
       justifyContent:'center',
       display:'flex',
       flexDirection:'column',
-
+      pt: 15
     }}
     >
       <Box sx={{py:3, mx:'auto'}}>
@@ -182,27 +182,27 @@ const Classifier = () => {
       <Box sx={{
           width: 350,
           height: 150,
-          py:5,
+          py:3,
           justifyContent: 'center',
           display:'flex',
           mx:'auto',
+          bgcolor: 'white',
+          opacity: 0.5,
+          borderRadius:2,
         }}
       >
       {imageUrl && <img src={imageUrl} alt="Uploaded Image" style={{maxHeight:'100%',maxWidth:'100%'}}/>}
       </Box>
 
-      <Box 
-      sx={{
+      <Box sx={{
         py:3,
         mx:'auto'
       }}>
         <StyledButton variant="contained" color="success" 
-              onClick={submitForm}>
-                Submit
-              </StyledButton>
+          onClick={submitForm}>
+            Submit
+        </StyledButton>
       </Box>
-        
-     
         
         <Box sx={{
           width: 350,
@@ -214,6 +214,7 @@ const Classifier = () => {
           justifyContent:'center',
           mx:'auto',
           flexDirection:'column',
+          alignItem: 'flex-start'
         }}
         > 
           <STypography fontSize={'large'} sx={{mx:"auto"}}

@@ -1,6 +1,5 @@
 import React from 'react'
-import { AppBar, Toolbar, styled, Box, Button, Stack } from '@mui/material'
-import { Link } from "react-router-dom";
+import { AppBar, Toolbar, styled, Box, Button, Stack, Link } from '@mui/material'
 
 
 
@@ -16,12 +15,19 @@ const NavbarAuth = () => {
   return (
     <StyledAppBar sx={{background: '#CBD91E'}}>
         <StyledToolBar>
-            <Box sx={{
-              color:'black', 
-              fontSize: "30px", 
-              fontWeight:'medium'}}
+            <Box sx={{p:2}}>
+              <Link 
+                component="button"
+                variant="inherit"
+                color="text.primary"
+                href="/"
+                underline="none"
+                fontSize= "28px"
+                fontWeight='medium'
               >
-                demiNasional</Box>
+                demiNASIonal
+              </Link>
+            </Box>
           
             <Stack
               direction="row"
@@ -45,7 +51,7 @@ const NavbarAuth = () => {
                 p:2
                 }}
                 variant='text'
-                href=""
+                href="brownspot"
                 size="large"
               >
                 Artikel
