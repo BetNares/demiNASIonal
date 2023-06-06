@@ -39,6 +39,7 @@ const LandingPage = () => {
     >
       <NavbarAuth/>
       <Container 
+        maxWidth="sl"
         sx={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1600387845879-a4713f764110?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmljZSUyMGZpZWxkfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60")',
           backgroundSize: 'cover',
