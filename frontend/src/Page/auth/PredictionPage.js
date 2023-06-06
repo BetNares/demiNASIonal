@@ -180,7 +180,7 @@ const Classifier = () => {
           mx:'auto',
         }}
       >
-      {imageUrl && <img src={imageUrl} style={{maxHeight:'100%',maxWidth:'100%'}}/>}
+      {imageUrl && <img src={imageUrl} alt="Uploaded picture" style={{maxHeight:'100%',maxWidth:'100%'}}/>}
       </Box>
 
       <Box 
