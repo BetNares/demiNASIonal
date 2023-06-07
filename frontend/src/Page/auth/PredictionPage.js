@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from 'axios';
-import {Box, Container, Typography , styled} from "@mui/material";
+import {Box, Container, Typography , styled, Stack, Divider} from "@mui/material";
 import Button from "@mui/material/Button";
 import NavbarAuth from "../../components/Navbar/NavbarAuth";
 import UploadButtons from "../../components/FileUploader";
@@ -150,81 +150,96 @@ const Classifier = () => {
       justifyContent:'center',
       display:'flex',
       flexDirection:'column',
-
+      pt: 8
     }}
     >
-      <Box sx={{py:3, mx:'auto'}}>
-        <input
-            hidden
-            id="upload-image"
-            accept="image/*"
-            type="file"
-            onChange={handleFileUpload}
-          />
-          
-        <StyledButton variant="contained" color="success"
-          sx={{
-            width: 250,
-            height: 70,
-            '&:hover': {
-              opacity: [0.9, 0.8, 0.7],
-            },
-          }}
-          >
-          <label htmlFor="upload-image">
-              <InsertPhotoIcon/>
-              <Typography>Masukan Gambar</Typography>
-          </label>
-        </StyledButton>
-        
-      </Box>
-        
-      <Box sx={{
-          width: 350,
-          height: 150,
-          py:5,
-          justifyContent: 'center',
-          display:'flex',
-          mx:'auto',
-        }}
+      <Stack 
+      direction="row" 
+      divider={<Divider orientation="vertical" flexItem />}
+      spacing={4} 
+      sx={{py:3, mx:'auto', alignContent: 'center'}}
       >
-      {imageUrl && <img src={imageUrl} alt="Uploaded Image" style={{maxHeight:'100%',maxWidth:'100%'}}/>}
-      </Box>
 
-      <Box 
-      sx={{
-        py:3,
-        mx:'auto'
-      }}>
-        <StyledButton variant="contained" color="success" 
+        <Stack 
+        direction="column" 
+        spacing={2} 
+        sx={{mx:'auto', justifyContent: 'center'}}
+        >
+
+          <Box >
+            <input
+              hidden
+              id="upload-image"
+              accept="image/*"
+              type="file"
+              onChange={handleFileUpload}
+            />
+          
+            <StyledButton variant="contained" color="success"
+              sx={{
+              width: 250,
+              height: 100,
+              borderRadius:2,
+              '&:hover': {
+                opacity: [0.9, 0.8, 0.7],
+              },
+              }}
+            >
+              <label htmlFor="upload-image">
+                <InsertPhotoIcon/>
+                <Typography>Masukan Gambar</Typography>
+              </label>
+            </StyledButton>
+          </Box>
+
+          <Box sx={{
+            py:1,
+            mx:'auto'
+          }}>
+            <StyledButton variant="contained" color="success" 
+              sx={{width: 250, }}
               onClick={submitForm}>
                 Submit
-              </StyledButton>
-      </Box>
-        
-     
+            </StyledButton>
+          </Box>
+
+        </Stack>
         
         <Box sx={{
           width: 350,
-          height: 50,
-          py:5,
-          backgroundColor: 'rgba(0,0,0, 0.5)',
-          borderRadius:2,
+          height: 150,
+          py:3,
+          justifyContent: 'center',
           display:'flex',
-          justifyContent:'center',
           mx:'auto',
-          flexDirection:'column',
+          bgcolor: 'rgba(237,230,214, 0.7)',
+          borderRadius:2,
         }}
-        > 
-          <STypography fontSize={'large'} sx={{mx:"auto"}}
-          >Hasil Klasifikasi: </STypography>
-          <STypography fontSize={'large'} sx={{mx:"auto"}}>  {result}</STypography>
+        >
+          {imageUrl && <img src={imageUrl} alt="Uploaded Image" style={{maxHeight:'100%',maxWidth:'100%'}}/>}
         </Box>
 
+      </Stack>
 
-    </Container>
-     
-      
+      <Box sx={{
+        width: 350,
+        height: 50,
+        py:5,
+        backgroundColor: 'rgba(10,25,10, 0.7)',
+        borderRadius:2,
+        display:'flex',
+        justifyContent:'center',
+        mx:'auto',
+        flexDirection:'column',
+        alignItem: 'flex-start'
+        }}
+      > 
+        <STypography fontSize={'large'} sx={{mx:"auto"}}
+          >Hasil Klasifikasi: </STypography>
+        <STypography fontSize={'large'} sx={{mx:"auto"}}>  {result}</STypography>
+      </Box>
+
+    </Container>  
     </MainBox>
   /*  <>
       <header>

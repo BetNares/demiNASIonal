@@ -1,7 +1,5 @@
 import React from "react";
-import {Box, Container, Typography , styled, Grid, Card, CardMedia, CardContent, CardActions} from "@mui/material";
-import Button from "@mui/material/Button";
-import Stack from '@mui/material/Stack';
+import {Button, Box, Container, Typography , styled, Grid, Card, CardMedia, CardContent, CardActions} from "@mui/material";
 import NavbarAuth from "../../components/Navbar/NavbarAuth";
 import Footer from "../../components/Navbar/Footer";
 
@@ -41,13 +39,14 @@ const LandingPage = () => {
     >
       <NavbarAuth/>
       <Container 
+        maxWidth="sl"
         sx={{
-          backgroundImage: 'url("https://1.bp.blogspot.com/_y8UUOgY_SFo/S9L1Q4jtXcI/AAAAAAAAOH0/Iqez2w981WI/s1600/DSC_2365.JPG")',
+          backgroundImage: 'url("https://images.unsplash.com/photo-1600387845879-a4713f764110?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmljZSUyMGZpZWxkfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60")',
           backgroundSize: 'cover',
           height: '60vh',
           width: '100%',
-          pt: 15,
-          pb: 6,
+          pt: 10,
+          pb: 8,
           alignContent: "center",
           justifyContent: "center",
           display: 'flex',
@@ -60,6 +59,7 @@ const LandingPage = () => {
             variant="h4"
             align="center"
             color="white"
+            sx={{pb:4}}
           >
             Kesehatan nasional dimulai dari kesehatan padi.
           </Typography>
@@ -100,7 +100,7 @@ const LandingPage = () => {
                   </Typography>
                 </CardContent>
                 <CardActions >
-                  <Button size="small">View</Button>
+                  <Button href="leafblast" size="small">View</Button>
                   {/* <Button size="small">Edit</Button> */}
                 </CardActions>
               </Card>

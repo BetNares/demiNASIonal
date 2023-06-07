@@ -1,6 +1,5 @@
 import React from 'react'
-import { AppBar, Toolbar, styled, Box, Button, Stack } from '@mui/material'
-import { Link } from "react-router-dom";
+import { AppBar, Toolbar, styled, Box, Button, Stack} from '@mui/material'
 
 
 
@@ -16,17 +15,29 @@ const NavbarAuth = () => {
   return (
     <StyledAppBar sx={{background: '#CBD91E'}}>
         <StyledToolBar>
-            <Box sx={{
-              color:'black', 
-              fontSize: "30px", 
-              fontWeight:'medium'}}
-              >
-                demiNasional</Box>
+            <Box sx={{p:2}}
+              fontSize= "28px"
+              fontWeight='medium'
+            >
+              demiNASIonal
+            </Box>
           
             <Stack
               direction="row"
               justifyContent="center"
             >
+              <Button sx={{
+                color:"black",
+                cursor: "pointer",
+                p:2
+                }}
+                variant='text'
+                href="/"
+                size="large"
+              >
+                Beranda
+              </Button>
+              
               <Button sx={{
                 color:"black",
                 cursor: "pointer",
@@ -45,7 +56,7 @@ const NavbarAuth = () => {
                 p:2
                 }}
                 variant='text'
-                href=""
+                href="brownspot"
                 size="large"
               >
                 Artikel
